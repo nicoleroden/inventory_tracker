@@ -52,6 +52,16 @@
             </div>
           </div>
 
+          <!-- Label and input for room_id -->
+          <div class="form-group">
+            <label for="room_id" class="col-sm-2 control-label">
+              Room
+            </label>
+            <div class="col-sm-10">
+              <%= select_tag(:room_id, options_from_collection_for_select(Room.where(user_id: current_user.id), :id, :name, @item.room_id), :class => "form-control") %>
+            </div>
+          </div>
+
           <!-- Label and input for location -->
           <div class="form-group">
             <label for="location" class="col-sm-2 control-label">
@@ -62,20 +72,12 @@
             </div>
           </div>
 
-          <!-- Label and input for room_id -->
-          <div class="form-group">
-            <label for="room_id" class="col-sm-2 control-label">
-              Room
-            </label>
-            <div class="col-sm-10">
-              <input type="text" id="room_id" name="room_id" placeholder="Room" class="form-control" value="<%= @item.room_id %>">
-            </div>
-          </div>
+
 
           <!-- Label and input for photo -->
           <div class="form-group">
             <label for="photo" class="col-sm-2 control-label">
-              Photo
+              Photo (optional)
             </label>
             <div class="col-sm-10">
               <input type="text" id="photo" name="photo" placeholder="Photo" class="form-control" value="<%= @item.photo %>">
@@ -86,7 +88,7 @@
           <!-- Label and input for link -->
           <div class="form-group">
             <label for="link" class="col-sm-2 control-label">
-              Link
+              Link (optional)
             </label>
             <div class="col-sm-10">
               <input type="text" id="link" name="link" placeholder="Link" class="form-control" value="<%= @item.link %>">
