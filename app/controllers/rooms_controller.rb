@@ -13,7 +13,7 @@ class RoomsController < ApplicationController
 
   def create
     @room = Room.new
-    @room.user_id = params[:user_id]
+    @room.user_id = current_user.id
     @room.name = params[:name]
 
     if @room.save
@@ -30,7 +30,7 @@ class RoomsController < ApplicationController
   def update
     @room = Room.find(params[:id])
 
-    @room.user_id = params[:user_id]
+    @room.user_id = current_user.id
     @room.name = params[:name]
 
     if @room.save

@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     @item.location = params[:location]
     @item.room_id = params[:room_id]
     @item.photo = params[:photo]
-    @item.user_id = params[:user_id]
+    @item.user_id = current_user.id
     @item.link = params[:link]
 
     if @item.save
@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
     @item.location = params[:location]
     @item.room_id = params[:room_id]
     @item.photo = params[:photo]
-    @item.user_id = params[:user_id]
+    @item.user_id = current_user.id
     @item.link = params[:link]
 
     if @item.save
