@@ -1,7 +1,16 @@
 class ItemsController < ApplicationController
 
+before_action :current_user_check, only: [:show, :edit, :update, :destroy]
+
+  def current_user_check
+    @item = Item.find(params[:id])
+    if @item.user_id != current_user.id
+        redirect_to :back
+    end
+  end
+
   def index
-    @items = Item.all
+    @items = Item.where(user_id: current_user.id)
   end
 
   def show
