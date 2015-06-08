@@ -69,4 +69,9 @@ before_action :current_user_check, only: [:show, :edit, :update, :destroy]
 
     redirect_to "/items", :notice => "Item deleted."
   end
+
+  def buy
+    @items = Item.where(user_id: current_user.id)
+  end
+
 end

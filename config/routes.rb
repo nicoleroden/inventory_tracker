@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root 'items#index'
 
+  get"/buy", :controller =>"items", :action =>"buy"
+
   # CREATE
   get "/rooms/new", :controller => "rooms", :action => "new"
   post "/create_room", :controller => "rooms", :action => "create"

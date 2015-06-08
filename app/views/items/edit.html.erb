@@ -33,14 +33,14 @@
           </div>
 
           <!-- Label and input for purchased -->
-          <div class="form-group">
+         <!-- <div class="form-group">
             <label for="purchased" class="col-sm-2 control-label">
               Purchased
             </label>
             <div class="col-sm-10">
               <input type="text" id="purchased" name="purchased" placeholder="Purchased" class="form-control" value="<%= @item.purchased %>">
             </div>
-          </div>
+          </div>-->
 
           <!-- Label and input for expiration -->
           <div class="form-group">
@@ -49,6 +49,16 @@
             </label>
             <div class="col-sm-10">
               <input type="text" id="expiration" name="expiration" placeholder="Expiration" class="form-control" value="<%= @item.expiration %>">
+            </div>
+          </div>
+
+          <!-- Label and input for room_id -->
+          <div class="form-group">
+            <label for="room_id" class="col-sm-2 control-label">
+              Room
+            </label>
+            <div class="col-sm-10">
+              <%= select_tag(:room_id, options_from_collection_for_select(Room.where(user_id: current_user.id), :id, :name, @item.room_id), :class => "form-control") %>
             </div>
           </div>
 
@@ -62,15 +72,7 @@
             </div>
           </div>
 
-          <!-- Label and input for room_id -->
-          <div class="form-group">
-            <label for="room_id" class="col-sm-2 control-label">
-              Room
-            </label>
-            <div class="col-sm-10">
-              <input type="text" id="room_id" name="room_id" placeholder="Room" class="form-control" value="<%= @item.room_id %>">
-            </div>
-          </div>
+
 
           <!-- Label and input for photo -->
           <div class="form-group">

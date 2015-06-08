@@ -1,7 +1,6 @@
 <div class="page-header">
   <h1>
-    Items
-    <a href="/items/new" class="btn btn-lg btn-success"><i class="fa fa-plus"></i></a>
+    Items To Buy
   </h1>
 </div>
 
@@ -50,16 +49,16 @@
 
         </dl>
         <div class="btn-group btn-group-justified">
-          <a href="/items/<%= item.id %>" class="btn btn-primary">
-            <i class="fa fa-search-plus"></i>
+          <a href="/items/<%= item.id %>/edit" class="btn btn-success">
+            Purchased</i>
           </a>
 
-          <a href="/items/<%= item.id %>/edit" class="btn btn-warning">
+<!--          <a href="/items/<%= item.id %>/edit" class="btn btn-warning">
             <i class="fa fa-edit"></i>
-          </a>
+          </a>-->
 
           <a href="/delete_item/<%= item.id %>" class="btn btn-danger" rel="nofollow">
-            <i class="fa fa-trash-o"></i>
+            Thrown Away</i>
           </a>
         </div>
       </div>
