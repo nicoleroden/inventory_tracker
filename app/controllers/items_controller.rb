@@ -24,8 +24,8 @@ before_action :current_user_check, only: [:show, :edit, :update, :destroy]
   def create
     @item = Item.new
     @item.name = params[:name]
-    @item.purchased = params[:purchased]
-    @item.expiration = params[:expiration]
+    @item.purchased = Chronic.parse(params[:purchased])
+    @item.expiration = Chronic.parse(params[:expiration])
     @item.location = params[:location]
     @item.room_id = params[:room_id]
     @item.photo = params[:photo]
@@ -71,7 +71,7 @@ before_action :current_user_check, only: [:show, :edit, :update, :destroy]
   end
 
   def buy
-    @items = Item.where(user_id: current_user.id)
+    @items = current_user.items.where("expiration < ?", Date.today)
   end
 
 end

@@ -14,16 +14,16 @@
               <dd><%= @item.name %></dd>
 
               <dt>Purchased</dt>
-              <dd><%= @item.purchased %></dd>
+              <dd><%= @item.purchased.strftime("%b %e, %Y") %></dd>
 
               <dt>Expiration</dt>
-              <dd><%= @item.expiration %></dd>
+              <dd><%= @item.expiration.strftime("%b %e, %Y") %></dd>
 
               <dt>Location</dt>
               <dd><%= @item.location %></dd>
 
               <dt>Room</dt>
-              <dd><%= @item.room_id %></dd>
+              <dd><%= @item.room.name %></dd>
 
               <dt>Photo</dt>
               <dd><%= @item.photo %></dd>

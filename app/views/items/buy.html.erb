@@ -16,7 +16,6 @@
 
 <div class="row isotope-container">
 <% @items.each do |item| %>
-<% if item.user_id == current_user.id  %>
 
 
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item">
@@ -29,11 +28,11 @@
           <dt>Name</dt>
           <dd><%= item.name %></dd>
 
-         <!-- <dt>Purchased</dt>
-          <dd><%= item.purchased %></dd> -->
+        <!-- <dt>Purchased</dt>
+          <dd><%= item.purchased %></dd>-->
 
           <dt>Expiration</dt>
-          <dd><%= item.expiration %></dd>
+          <dd><%= item.expiration.strftime("%b %e, %Y") %></dd>
 
           <dt>Location</dt>
           <dd><%= item.location %></dd>
@@ -64,7 +63,7 @@
       </div>
     </div>
   </div>
-<% end %>
+
 <% end %>
 </div>
 

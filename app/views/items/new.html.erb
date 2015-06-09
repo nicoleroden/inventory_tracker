@@ -35,10 +35,10 @@
           <!-- Label and input for purchased -->
           <div class="form-group">
             <label for="purchased" class="col-sm-2 control-label">
-              Purchased
+              Purchased (optional)
             </label>
             <div class="col-sm-10">
-              <input type="text" id="purchased" name="purchased" placeholder="Purchased" value="<%= @item.purchased %>">
+              <input type="text" id="purchased" name="purchased" placeholder="mm/dd/yyyy" class="form-control" value="<%= @item.purchased %>">
             </div>
           </div>
 
@@ -48,7 +48,7 @@
               Expiration
             </label>
             <div class="col-sm-10">
-              <input type="text" id="expiration" name="expiration" placeholder="Expiration" class="form-control" value="<%= @item.expiration %>">
+              <input type="text" id="expiration" name="expiration" placeholder="mm/dd/yyyy" class="form-control" value="<%= @item.expiration %>">
             </div>
           </div>
 
@@ -65,7 +65,7 @@
           <!-- Label and input for location -->
           <div class="form-group">
             <label for="location" class="col-sm-2 control-label">
-              Location
+              Location (optional)
             </label>
             <div class="col-sm-10">
               <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="<%= @item.location %>">
