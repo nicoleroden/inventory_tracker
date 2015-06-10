@@ -1,6 +1,6 @@
 <div class="page-header">
   <h1>
-    Items To Buy
+    <i class="fa fa-shopping-cart"></i> Items To Buy
   </h1>
 </div>
 
@@ -26,7 +26,7 @@
       <div class="panel-body">
         <dl>
 
-          <dd><img src="<%= item.photo %>"height="200"></dd>
+          <dd><img src="<%= item.photo %>"height="150"></dd>
           <p></p>
 
         <dt>Purchased</dt>
@@ -46,8 +46,8 @@
 
         </dl>
         <div class="btn-group btn-group-justified">
-          <a href="/items/<%= item.id %>/edit" class="btn btn-success">
-            Purchased</i>
+          <a href="/items/<%= item.id %>/edit" class="btn btn-success"><i class="fa fa-shopping-cart"></i>
+            Purchased
           </a>
 
 <!--          <a href="/items/<%= item.id %>/edit" class="btn btn-warning">
@@ -55,7 +55,7 @@
           </a>-->
 
           <a href="/delete_item/<%= item.id %>" class="btn btn-danger" rel="nofollow">
-            Thrown Away</i>
+            <i class="fa fa-trash-o"></i> Trashed
           </a>
         </div>
       </div>

@@ -6,6 +6,7 @@
 
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/yeti/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <style>
@@ -41,18 +42,18 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/rooms">Rooms</a></li>
-          <li><a href="/items">Items</a></li>
-          <li><a href="/buy">To Buy</a></li>
+          <li><a href="/rooms"><i class="fa fa-home"></i> Rooms</a></li>
+          <li><a href="/items"><i class="fa fa-archive"></i> Items</a></li>
+          <li><a href="/buy"><i class="fa fa-shopping-cart"></i> To Buy</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
           <% if current_user.present? %>
             <li><a href="/users/edit"><%= current_user.username %></a></li>
-            <li><a href="/users/sign_out" data-method="delete" rel="nofollow">Sign out</a></li>
+            <li><a href="/users/sign_out" data-method="delete" rel="nofollow"><i class="fa fa-sign-out"></i> Sign out</a></li>
           <% else %>
             <li><a href="/users/sign_up">Sign up</a></li>
-            <li><a href="/users/sign_in">Sign in</a></li>
+            <li><a href="/users/sign_in"><i class="fa fa-sign-in"></i> Sign in</a></li>
           <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
