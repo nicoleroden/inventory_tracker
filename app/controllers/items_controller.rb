@@ -19,6 +19,7 @@ before_action :current_user_check, only: [:show, :edit, :update, :destroy]
 
   def new
     @item = Item.new
+    @room = Room.new
   end
 
   def create
