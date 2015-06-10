@@ -34,7 +34,7 @@ before_action :current_user_check, only: [:show, :edit, :update, :destroy]
     @item.link = params[:link]
 
     if @item.save
-      redirect_to "/items", :notice => "Item created successfully."
+      redirect_to :back, :notice => "Item created successfully."
     else
       render 'new'
     end

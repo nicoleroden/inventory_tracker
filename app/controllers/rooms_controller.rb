@@ -28,7 +28,7 @@ before_action :current_user_check, only: [:show, :edit, :update, :destroy]
     @room.name = params[:name]
 
     if @room.save
-      redirect_to "/rooms", :notice => "Room created successfully."
+      redirect_to :back, :notice => "Room created successfully."
     else
       render 'new'
     end
