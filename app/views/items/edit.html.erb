@@ -33,14 +33,14 @@
           </div>
 
           <!-- Label and input for purchased -->
-         <!-- <div class="form-group">
+         <div class="form-group">
             <label for="purchased" class="col-sm-2 control-label">
               Purchased
             </label>
             <div class="col-sm-10">
-              <input type="text" id="purchased" name="purchased" placeholder="Purchased" class="form-control" value="<%= @item.purchased %>">
+              <input type="text" id="purchased" name="purchased" placeholder="Purchased" class="form-control" value="<%= @item.purchased.strftime("%m/%d/%Y") %>">
             </div>
-          </div>-->
+          </div>
 
           <!-- Label and input for expiration -->
           <div class="form-group">
@@ -48,7 +48,7 @@
               Expiration
             </label>
             <div class="col-sm-10">
-              <input type="text" id="expiration" name="expiration" placeholder="Expiration" class="form-control" value="<%= @item.expiration %>">
+              <input type="text" id="expiration" name="expiration" placeholder="Expiration" class="form-control" value="<%= @item.expiration.strftime("%m/%d/%Y") %>">
             </div>
           </div>
 

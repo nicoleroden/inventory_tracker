@@ -4,14 +4,16 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Item #<%= @item.id %></h3>
+        <h3 class="panel-title"><dd><%= @item.name %></dd></h3>
       </div>
       <div class="panel-body">
         <div class="row">
           <div class="col-md-12">
             <dl class="dl-horizontal">
-              <dt>Name</dt>
-              <dd><%= @item.name %></dd>
+
+              <dd><img src="<%= @item.photo %>"height="300"></dd>
+
+              <p></p>
 
               <dt>Purchased</dt>
               <dd><%= @item.purchased.strftime("%b %e, %Y") %></dd>
@@ -25,11 +27,9 @@
               <dt>Room</dt>
               <dd><%= @item.room.name %></dd>
 
-              <dt>Photo</dt>
-              <dd><%= @item.photo %></dd>
+              <dt>Link to Purchase</dt>
+              <dd><a href="<%= @item.link %>">Click here</a></dd>
 
-              <dt>Link</dt>
-              <dd><%= @item.link %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
