@@ -28,7 +28,7 @@
               <dd><%= @item.room.name %></dd>
 
               <dt>Link to Purchase</dt>
-              <dd><a href="<%= @item.link %>" target="_blank">Click here</a></dd>
+              <dd><% if @item.link != "" then%><a href="<%= @item.link %>" target="_blank">Click here</a></dd><% end %>
 
 
             </dl>
