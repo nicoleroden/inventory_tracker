@@ -4,7 +4,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title"><dd><%= @item.name %></dd></h3>
+        <h3 class="panel-title"><dd><%= @item.name %><font color="red"><strong><%= if @item.expiration < Date.today then "   TO BUY!" else "" end %></strong></font></dd></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -28,7 +28,7 @@
               <dd><%= @item.room.name %></dd>
 
               <dt>Link to Purchase</dt>
-              <dd><a href="<%= @item.link %>">Click here</a></dd>
+              <dd><a href="<%= @item.link %>" target="_blank">Click here</a></dd>
 
 
             </dl>
