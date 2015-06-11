@@ -7,5 +7,6 @@ validates :room_id, :presence => true
 
 
   belongs_to :room
+  belongs_to :user
 
 end

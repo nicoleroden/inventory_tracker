@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
     validates :username,:presence => true, :uniqueness => true
 
     has_many :items
+    has_many :rooms
+
 end
